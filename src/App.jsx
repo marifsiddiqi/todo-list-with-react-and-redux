@@ -1,14 +1,18 @@
-import { useState } from 'react'
-import AddTodo from './components/addTodo'
+import ListTodo from './components/ListTodo'
+import AddTodo from './components/AddTodo'
 // import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
-    <>
-      <AddTodo/>
-    </>
+    <div className='flex flex-col w-screen h-screen bg-red-200 items-center'>
+      <div className='flex w-full h-auto bg-red-200 justify-center'>
+        <div className='flex flex-col w-80 py-32'>
+          {/* <AddTodo /> */}
+          <ListTodo />
+        </div>
+      </div>
+    </div>
   )
 }
 
