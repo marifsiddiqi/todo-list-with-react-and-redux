@@ -5,7 +5,7 @@ import ListTodo from './components/ListTodo'
 function App() {
 
   return (
-    <div className='flex flex-col w-screen h-screen bg-red-200 items-center'>
+    <div className='flex flex-col w-screen h-screen bg-red-200 items-center overflow-x-hidden'>
       <div className='flex w-full h-auto bg-red-200 justify-center'>
         <div className='flex w-80 py-24'>
           {/* <AddTodo /> */}

@@ -95,7 +95,7 @@ function ListTodo() {
                                         onChange={handleChecked}
                                         name=""
                                         className="w-1/6 h-6 checked:bg-green-400" />
-                                    {todo.completed ? <span className="w-5/6 text-ellipsis overflow-hidden line-through">{todo.value}</span> : <span className="w-5/6 text-ellipsis overflow-hidden">{todo.value}</span>}
+                                    {todo.completed ? <span className="w-5/6 text-ellipsis overflow-hidden line-through">{todo.value}</span> : <span className="w-5/6 text-ellipsis overflow-x-hidden">{todo.value}</span>}
                                 </div>
                                 <div className="flex items-center text-gray-800 space-x-1">
                                     <button onClick={(e) => (e.preventDefault(), modeEdit(todo.id, todo.value))}><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24"><path fill="currentColor" d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83l3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z" /></svg></button>
