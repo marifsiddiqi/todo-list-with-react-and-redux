@@ -88,14 +88,14 @@ function ListTodo() {
                     ) : (
                         filteredTodos.map(todo => (
                             <div key={todo.id} className="flex w-full items-center justify-between bg-white border border-gray-800 rounded-md px-2 py-1">
-                                <div className="flex items-center space-x-2">
+                                <div className="flex w-3/4 items-center space-x-2 font-medium">
                                     <input type="checkbox"
                                         id={todo.id} // Mengatur ID dari checkbox
                                         checked={todo.completed}
                                         onChange={handleChecked}
                                         name=""
-                                        className="w-6 h-6 checked:bg-green-400" />
-                                    {todo.completed ? <span className="line-through">{todo.value}</span> : <span>{todo.value}</span>}
+                                        className="w-1/6 h-6 checked:bg-green-400" />
+                                    {todo.completed ? <span className="w-5/6 text-ellipsis overflow-hidden line-through">{todo.value}</span> : <span className="w-5/6 text-ellipsis overflow-hidden">{todo.value}</span>}
                                 </div>
                                 <div className="flex items-center text-gray-800 space-x-1">
                                     <button onClick={(e) => (e.preventDefault(), modeEdit(todo.id, todo.value))}><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24"><path fill="currentColor" d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83l3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z" /></svg></button>
